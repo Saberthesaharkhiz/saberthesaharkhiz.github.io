@@ -8,19 +8,55 @@
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧬</text></svg>">
   <style>
-    /* Additional inline styles for the header and image */
-    .header-name {
-      font-size: 2.5em; /* Adjusts the font size */
-      font-weight: bold; /* Makes the text bold */
-      text-align: center; /* Centers the text */
-      margin: 10px 0; /* Adds spacing around the header */
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 14px; /* Default font size for better readability on mobile */
+      margin: 0;
+      padding: 0;
     }
+
+    .header-name {
+      font-size: 1.8em; /* Smaller font for mobile devices */
+      font-weight: bold;
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    p {
+      font-size: 0.9em; /* Adjust text size for paragraphs */
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+
     .profile-image {
-      width: 90%; /* Adjust image size (90% of container) */
-      max-width: 700px; /* Maximum width for responsiveness */
-      height: auto; /* Maintain aspect ratio */
-      display: block; /* Center the image */
-      margin: 0 auto; /* Center the image */
+      width: 80%; /* Adjust image size to be more responsive */
+      max-width: 200px; /* Set max width for small screens */
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 10px; /* Rounded corners for a cleaner look */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Media Queries for Smaller Screens */
+    @media (max-width: 768px) {
+      .header-name {
+        font-size: 1.5em; /* Further reduce font size for smaller screens */
+      }
+
+      p {
+        font-size: 0.8em; /* Further adjust paragraph font size */
+      }
     }
   </style>
 </head>
@@ -37,50 +73,41 @@ function toggle_vis(id) {
 </script>
 
 <body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <table style="width:100%;max-width:800px;border:0px;margin:auto;">
     <tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr style="padding:0px">
-                <td style="padding:2.5%;width:63%;vertical-align:middle">
-                  <p class="header-name">Saber Saharkhiz</p>
-                  <p>
-                    Hi, I am a molecular cell systems biologist (currently, a PhD candidate in Neuroscience) using genes 🧬, microscopy 🔬, computer science 💻, and math 📊 to understand the nervous system 🧠.
-                  </p>
-                  <p>
-                    📍<strong>My academic journey:</strong>  
-                    I completed my veterinary medicine training (a combination of both Biology and Medicine) in August 2021, inspired by my prior exposure to medical research. Shortly after, I joined a lab at the Faculty of Medicine, University of Sherbrooke in Quebec, where I applied Machine Learning to monitor Multiple Sclerosis and gained extensive experience in advanced Programming and Biostatistics. This experience fueled my passion for research, which led me to pursue a graduate program in Neuroscience at the Faculty of Medicine, University of Ottawa. There, I have been focusing on leveraging deep learning and computational techniques in Microscopy and Cell Biology to study nerve cord development. 
-                  </p>
-                  <p>
-                    Throughout my research career, I have focused on addressing medical challenges using Machine Learning, Computational methods, and essential Experimental Lab techniques. My training has enabled me to formulate questions in animal models that are transferable to human health.
-                  </p>
-                  <p>
-                    <strong>“Remember:</strong> Progress in biology is highly correlated with how fast and efficient we can do experiments/analyses. More AI, please!”
-                  </p>
-                  <p>
-                    <strong>You can reach out to me at:</strong>  
-                    <a href="mailto:saber.saharkhiz@uOttawa.ca">saber.saharkhiz@uOttawa.ca</a> or
-                    <a href="mailto:ssaharkhiz@ohri.ca">ssaharkhiz@ohri.ca</a>
-                  </p>
-                  
-                  <p style="text-align:center">
-                    <a href="https://scholar.google.com/citations?user=nrMd5k0AAAAJ&hl=en&oi=ao">Google Scholar</a> &nbsp;/&nbsp;
-                    <a href="https://github.com/Saberthesaharkhiz/">GitHub</a> &nbsp;/&nbsp;
-                    <a href="https://www.linkedin.com/in/saharkhizsaber/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">LinkedIn</a> &nbsp;/&nbsp;
-                    <a href="https://bsky.app/profile/sabersaharkhiz.bsky.social">Bluesky</a> &nbsp;/&nbsp;
-                    <a href="https://x.com/SaharkhizSaber">X</a>
-                  </p>
-                </td>
-                <td style="padding:2.5%;width:40%;max-width:40%">
-                  <a href="https://raw.githubusercontent.com/Saberthesaharkhiz/saber-saharkhiz.github.io/main/saber.jpeg">
-                    <img class="profile-image" alt="profile photo" src=https://github.com/Saberthesaharkhiz/saberthesaharkhiz.github.io/blob/main/saber.jpeg?raw=true>
-                  </a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+      <tr>
+        <td style="width:60%;padding:20px;vertical-align:top;">
+          <p class="header-name">Saber Saharkhiz</p>
+          <p>
+            Hi, I am a molecular cell systems biologist (currently, a PhD candidate in Neuroscience) using genes 🧬, microscopy 🔬, computer science 💻, and math 📊 to understand the nervous system 🧠.
+          </p>
+          <p>
+            📍<strong>My academic journey:</strong>  
+            I completed my veterinary medicine training (a combination of both Biology and Medicine) in August 2021, inspired by my prior exposure to medical research. Shortly after, I joined a lab at the Faculty of Medicine, University of Sherbrooke in Quebec, where I applied Machine Learning to monitor Multiple Sclerosis and gained extensive experience in advanced Programming and Biostatistics. This experience fueled my passion for research, which led me to pursue a graduate program in Neuroscience at the Faculty of Medicine, University of Ottawa. There, I have been focusing on leveraging deep learning and computational techniques in Microscopy and Cell Biology to study nerve cord development. 
+          </p>
+          <p>
+            Throughout my research career, I have focused on addressing medical challenges using Machine Learning, Computational methods, and essential Experimental Lab techniques. My training has enabled me to formulate questions in animal models that are transferable to human health.
+          </p>
+          <p>
+            <strong>“Remember:</strong> Progress in biology is highly correlated with how fast and efficient we can do experiments/analyses. More AI, please!”
+          </p>
+          <p>
+            <strong>You can reach out to me at:</strong>  
+            <a href="mailto:saber.saharkhiz@uOttawa.ca">saber.saharkhiz@uOttawa.ca</a> or
+            <a href="mailto:ssaharkhiz@ohri.ca">ssaharkhiz@ohri.ca</a>
+          </p>
+          <p style="text-align:center">
+            <a href="https://scholar.google.com/citations?user=nrMd5k0AAAAJ&hl=en&oi=ao">Google Scholar</a> &nbsp;/&nbsp;
+            <a href="https://github.com/Saberthesaharkhiz/">GitHub</a> &nbsp;/&nbsp;
+            <a href="https://www.linkedin.com/in/saharkhizsaber/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">LinkedIn</a> &nbsp;/&nbsp;
+            <a href="https://bsky.app/profile/sabersaharkhiz.bsky.social">Bluesky</a> &nbsp;/&nbsp;
+            <a href="https://x.com/SaharkhizSaber">X</a>
+          </p>
+        </td>
+        <td style="width:40%;padding:20px;text-align:center;">
+          <a href="https://raw.githubusercontent.com/Saberthesaharkhiz/saber-saharkhiz.github.io/main/saber.jpeg">
+            <img class="profile-image" alt="profile photo" src="https://github.com/Saberthesaharkhiz/saberthesaharkhiz.github.io/blob/main/saber.jpeg?raw=true">
+          </a>
         </td>
       </tr>
     </tbody>
